@@ -1,0 +1,114 @@
+<head>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="script.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Major+Mono+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="card-display-container">
+        <div id="card-display">
+            <div id="front">
+                <img src="dithered_edit.png" class="face"/>
+                <h1 class="name">Léo Giroud<h1>
+                <p class="desc">
+                    Full Stack Developer<br/>
+                    Physicist<br/>
+                </p>
+                <p class="contact">
+                    contact@leog.dev
+                </p>
+            </div>
+            <div id="middle"></div>
+            <div id="back">
+                <p>
+                    LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. 
+                    MORBI CURSUS PORTTITOR CONDIMENTUM. 
+                    VESTIBULUM ANTE IPSUM PRIMIS IN FAUCIBUS ORCI LUCTUS ET ULTRICES POSUERE CUBILIA CURAE; 
+                    PROIN MOLLIS RISUS AC NULLA FINIBUS, NON COMMODO LEO FACILISIS. 
+                    PROIN POSUERE ORCI UT SEMPER PRETIUM. PRAESENT NON FRINGILLA JUSTO. 
+                    SUSPENDISSE NON LIBERO VEL PURUS VESTIBULUM SOLLICITUDIN ET ALIQUAM FELIS. 
+                    PROIN UT BLANDIT URNA. PELLENTESQUE SED DIAM NON LACUS ULLAMCORPER FINIBUS. 
+                    PHASELLUS BIBENDUM ACCUMSAN ARCU, SED CONVALLIS NISL ALIQUET NEC. 
+                    ETIAM SEMPER, LECTUS QUIS PULVINAR ACCUMSAN, NEQUE URNA FERMENTUM EST, AT ALIQUET ELIT SEM UT LIGULA. 
+                    VIVAMUS UT BLANDIT ORCI. MORBI EFFICITUR SOLLICITUDIN EROS ET EFFICITUR. 
+                    VIVAMUS VARIUS EROS ERAT, SED SAGITTIS NISL MATTIS A. 
+                    DONEC ORNARE ULTRICES METUS PORTTITOR EUISMOD. ETIAM HENDRERIT BLANDIT NISL TEMPUS ULLAMCORPER. 
+                    INTEGER A SOLLICITUDIN ANTE. NULLAM LAOREET LIGULA VEL MI VOLUTPAT, VEHICULA VIVERRA DOLOR MATTIS. 
+                    INTEGER SIT AMET LIBERO ALIQUET, FAUCIBUS DOLOR NEC, LUCTUS QUAM. 
+                    PRAESENT NULLA EROS, GRAVIDA AT ERAT FINIBUS, PLACERAT TINCIDUNT TELLUS. 
+                    NAM ID TINCIDUNT LACUS, PORTTITOR CONDIMENTUM RISUS.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <div id="paragraph">
+            <h1>Bonjour 👋 enchanté !</h1>
+            <h1>Et si je créais votre site web ? 🌍</h1>
+            <p>Avec plus de 5 ans d'expérience dans la création et le maintient de sites internet, j'interviens sur tout type de projet :</p>
+            <ul>
+                <li>Création de site vitrine</li>
+                <li>Création de site dynamiques : boutique, billeterie, réservation, etc.</li>
+                <li>Service complexe sur mesure</li>
+                <li>Maintien d'infrastructures déjà existantes</li>
+            </ul>
+            <p>Je m'occupe de toute la chaîne : création et mise en ligne du projet, achat du nom de domaine, surveillance et maintenance de l'hébergement, cybersécurité, ...</p>
+            <h3><i>Une question ? Écrivez-moi !</i></h3>
+        </div>
+        <div id="card-grid-container">
+            <div class="row">
+                <div class="card-grid"><img src="assets/a0.png"/></div>
+                <div class="card-grid"><img src="assets/b0.png"/></div>
+                <div class="card-grid"><img src="assets/c0.png"/></div>
+                <div class="card-grid"><img src="assets/d0.png"/></div>
+                <div class="card-grid"><img src="assets/e0.png"/></div>
+                <div class="card-grid"><img src="assets/f0.png"/></div>
+                <div class="card-grid"><img src="assets/g0.png"/></div>
+                <div class="card-grid"><img src="assets/h0.png"/></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div id="deck">
+            <form class="card-link" style="--pos: 3cap">
+                <input class="card-link" id="card-4" type="checkbox" onclick="uncheckAllExceptCurrent(this)">
+                <label for="card-4">
+                    <span class="logo">📧</span>
+                    <a href="mailto:contact@leog.dev" class="content">contact@leog.dev</a>
+                    <p class="title">email</p>
+                </label>
+            </form>
+            <form class="card-link" style="--pos: 2cap">
+                <input class="card-link" id="card-3" type="checkbox" onclick="uncheckAllExceptCurrent(this)">
+                <label for="card-3">
+                    <span class="logo">🪪</span>
+                    <a href="https://linkedin.com/in/leogiroud" class="content">in/leogiroud</a>
+                    <p class="title">linkedin</p>
+                </label>
+            </form>
+            <form class="card-link" style="--pos: 1cap">
+                <input class="card-link" id="card-2" type="checkbox" onclick="uncheckAllExceptCurrent(this)">
+                <label for="card-2">
+                    <span class="logo">💻</span>
+                    <a href="https://github.com/grdleo" class="content">github.com/grdleo</a>
+                    <p class="title">github</p>
+                </label>
+            </form>
+            <form class="card-link" style="--pos: 0cap">
+                <input class="card-link" id="card-1" type="checkbox" onclick="uncheckAllExceptCurrent(this)">
+                <label for="card-1">
+                    <span class="logo">🔗</span>
+                    <span class="content">cliquez-moi !</span>
+                    <p class="title">mes liens</p>
+                </label>
+            </form>
+        </div>
+        <div id="end-word">
+            Website template by Léo Giroud (2024) -- all rights reserved!
+        </div>
+    </footer>
+    
+</body>
