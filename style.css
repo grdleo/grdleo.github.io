@@ -91,14 +91,26 @@ body {
     text-align: center;
 }
 
+#card-display #front {
+    background-color: rgba(59, 72, 255, 0.75);
+}
+
+#card-display #bfront {
+    background: rgba(255, 255, 255, 0);
+    transform: translateZ(-5px) translateX(5px) translateY(5px);
+}
+
 #card-display #middle {
     background: rgba(150, 150, 150, 0.75);
-    transform: translateZ(-5px);
+    transform: translateZ(-10px);
     box-shadow: 0px 0px 150px rgba(255, 255, 255, 0.468);
 }
 
-#card-display #front {
-    background-color: rgba(59, 72, 255, 0.75);
+#card-display #back {
+    font-size: calc(var(--card-display-height) * 0.04);
+    line-height: calc(var(--card-display-height) * 0.04);
+    transform: translateZ(-20px) rotateY(180deg);
+    background-color: rgba(255, 158, 79, 0.75);
 }
 
 #card-display div .face {
@@ -108,14 +120,14 @@ body {
 }
 
 
-#card-display #front .name {
+#card-display div .name {
     font-size: calc(var(--card-display-height) * 0.1);
     position: absolute;
     bottom: calc(var(--card-display-height) * 0.07);
     left: calc(var(--card-display-width) * 0.05);
 }
 
-#card-display #front .desc {
+#card-display div .desc {
     text-align: right;
     font-size: calc(var(--card-display-height) * 0.04);
     position: absolute;
@@ -123,20 +135,13 @@ body {
     left: calc(var(--card-display-width) * 0.05);
 }
 
-#card-display #front .contact {
+#card-display div .contact {
     color: white;
     text-decoration: none;
     position: absolute;
     top: 0;
     left: calc(var(--card-display-width) * 0.05);
     font-size: calc(var(--card-display-height) * 0.04);
-}
-
-#card-display #back {
-    font-size: calc(var(--card-display-height) * 0.04);
-    line-height: calc(var(--card-display-height) * 0.04);
-    transform: translateZ(-20px) rotateY(180deg);
-    background-color: rgba(255, 158, 79, 0.75);
 }
 
 form.card-link {
