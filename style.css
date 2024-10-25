@@ -1,10 +1,13 @@
 :root {
-    --body-padding: 3vh;
-    --body-real-width: calc(100vw - 2 * var(--body-padding));
-    --from-top: 10vh;
+    --body-font-size: 8mm;
     --card-display-ratio: 1.585;
     --card-display-width: clamp(5cm, 50vw, 16cm);
     --card-display-height: calc(var(--card-display-width) / var(--card-display-ratio));
+
+    --card-grid-width: calc(100vw / 4);
+    --card-grid-border-color: rgb(243, 233, 222);
+    --card-grid-hover-translation: calc(var(--card-grid-width) * -0.2);
+    --card-grid-vert-spacing: 10vh;
     
     --card-title-size: 14mm;
     --card-slide-y-fact: 4;
@@ -16,12 +19,8 @@
     --card-link-border-color: rgb(182, 192, 218);
     --card-link-border-bottom: calc(var(--card-link-height) / 30);
     --card-link-border-right: calc(var(--card-link-border-bottom) * 0.5);
-    
-}
 
-body {
-    margin: 0;
-    background: linear-gradient(
+    --bg-gradient: linear-gradient(
         5deg,
         rgb(10, 3, 39) 5%,
         rgb(44, 81, 231) 25%, 
@@ -32,6 +31,29 @@ body {
         rgb(5, 9, 75) 66%, 
         rgb(0, 0, 0) 100%
     );
+
+    @media (orientation: portrait) {
+        --card-display-width: 85vw;
+        --body-font-size: 10mm;
+        --card-grid-width: calc(100vw / 2.5);
+        --bg-gradient: linear-gradient(
+            5deg,
+            rgb(10, 3, 39) 5%,
+            rgb(44, 81, 231) 18%, 
+            rgb(251, 166, 55) 18%, 
+            rgb(11, 11, 125) 50%, 
+            rgb(24, 27, 84) 65%,
+            rgb(242, 191, 141) 65%, 
+            rgb(5, 9, 75) 66%, 
+            rgb(0, 0, 0) 100%
+        );
+    }
+    
+}
+
+body {
+    margin: 0;
+    background: var(--bg-gradient);
     font-family: 'Courier Prime', 'Courier New', Courier, monospace;
     color: white;
 }
@@ -195,14 +217,18 @@ form.card-link label .logo {
 
 #paragraph {
     width: 100%;
-    font-size: 8mm;
+    font-size: var(--body-font-size);
     font-weight: 100;
     color: rgb(44, 44, 44);
     background: rgb(255, 255, 255);
     box-shadow: 0px 0px 50px;
-    margin: 3vw;
-    padding: 3vw;
+    margin: 2vw;
+    padding: 2vw;
     border-radius: 25px;
+}
+
+#paragraph div.text {
+    margin: 0 5vw 0 5vw;
 }
 
 #paragraph h1 {
@@ -215,10 +241,6 @@ form.card-link label .logo {
 }
 
 #card-grid-container {
-    --card-grid-width: calc(100vw / 4);
-    --card-grid-border-color: rgb(243, 233, 222);
-    --card-grid-hover-translation: calc(var(--card-grid-width) * -0.2);
-
     animation: grid-translation-animation 30s infinite ease-in-out alternate;
 }
 
@@ -262,7 +284,6 @@ div.card-grid img {
 }
 
 footer {
-    /* background: gray; */
 }
 
 footer #end-word {
