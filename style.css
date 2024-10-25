@@ -124,6 +124,8 @@ body {
 }
 
 #card-display #front .contact {
+    color: white;
+    text-decoration: none;
     position: absolute;
     top: 0;
     left: calc(var(--card-display-width) * 0.05);
